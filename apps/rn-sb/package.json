@@ -1,0 +1,36 @@
+{
+  "name": "rn-sb",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-native": "*",
+    "@testing-library/react-native": "*",
+    "react-native": "0.70.5",
+    "expo": "~47.0.12",
+    "react-native-svg": "*",
+    "react-native-web": "*",
+    "@nrwl/expo": "*",
+    "@expo/metro-config": "*",
+    "react": "18.1.0",
+    "@expo/webpack-config": "*",
+    "@storybook/addon-ondevice-actions": "*",
+    "@storybook/addon-ondevice-backgrounds": "*",
+    "@storybook/addon-ondevice-controls": "*",
+    "@storybook/addon-ondevice-notes": "*",
+    "expo-splash-screen": "~0.17.5",
+    "expo-status-bar": "~1.4.2",
+    "@babel/core": "*",
+    "@storybook/react-native": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "react-native-safe-area-context": "*"
+  },
+  "scripts": {
+    "postinstall": "rm -r node_modules && cd ../../ && yarn install && npx nx sync-deps rn-sb && npx nx ensure-symlink rn-sb",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  }
+}
